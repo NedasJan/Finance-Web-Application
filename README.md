@@ -13,7 +13,7 @@ How to run (Mac OS):
 6. Activate the virtual environment. Run ". (name of environment)/bin/activate".
 7. Install Flask. Run: "pip3 install flask".
 8. Install SQLite. Run: "pip3 install pysqlite3".
-9. Install Flask-Session. Run "pip3 install Flask-Session".
+9. Install Flask-Session. Run "pip3 install flask-session".
 10. Install requests. Run "pip3 install requests".
 11. Install bcrypt. Run "pip3 install bcrypt".
 12. Save the files from the repository in to a directory you previously created.
