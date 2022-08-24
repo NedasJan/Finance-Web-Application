@@ -327,9 +327,9 @@ def history():
 
     # Get user transactions from the database
     cursor.execute("SELECT * FROM transactions WHERE user_id = ? ORDER BY date DESC, time DESC", (session["user_id"],))
-    user_transactions = cursor.fetchall()
+    transactions = cursor.fetchall()
 
-    return render_template("history.html", user_transactions=user_transactions)
+    return render_template("history.html", transactions=transactions)
 
 
 @app.route("/settings", methods=["GET", "POST"])
