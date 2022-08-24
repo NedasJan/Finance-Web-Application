@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}History{% endblock %}
+
+{% block main %}
+    <table class="stock_table">
+        <thead>
+            <tr class="underlined_tr">
+                <th>Transaction type</th>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Transaction ID</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for transaction in user_transactions %}
+                <tr class="underlined_tr">
+                    <td>{{ transaction[2] }}</td>
+                    <td>{{ transaction[3] }}</td>
+                    <td>{{ transaction[4] }}</td>
+                    <td>{{ transaction[6] }}</td>
+                    <td>{{ transaction[5] }}</td>
+                    <td>{{ transaction[0] }}</td>
+                    <td>{{ transaction[7] }}</td>
+                    <td>{{ transaction[8] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

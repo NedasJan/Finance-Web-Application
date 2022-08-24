@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}Quoted{% endblock %}
+
+{% block main %}
+    <table class="stock_table">
+        <thead>
+            <tr class="underlined_tr">
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="underlined_tr">
+                <td>{{ stock_info["symbol"] }}</td>
+                <td>{{ stock_info["name"] }}</td>
+                <td>{{ stock_info["price"] }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

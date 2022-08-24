@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block main %}
+    <table class="stock_table">
+        <thead>
+            <tr class="underlined_tr">
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for stock in portfolio %}
+                <tr class="underlined_tr">
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["name"] }}</td>
+                    <td>{{ stock["shares"] }}</td>
+                    <td>{{ stock["price"] }}</td>
+                    <td>{{ stock["total"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <table class="fund_table mt-5">
+        <tr>
+            <th>Balance</th>
+            <td>{{ fiat_balance }}</td>
+        </tr>
+
+        <tr>
+            <th>Total</th>
+            <td>{{ total }}</td>
+        </tr>
+    </table>
+{% endblock %}

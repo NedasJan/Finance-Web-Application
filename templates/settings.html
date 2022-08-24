@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}Settings{% endblock %}
+
+{% block main %}
+    <form action="/settings" method="post">
+        <div class="container">
+            <h1>Change password</h1>
+
+            <div class="row">
+                <input type="password" class="form-control me-3" name="old_password" placeholder="Old password">
+                <input type="password" class="form-control me-3" name="password" id="password" placeholder="New password">
+                <input type="password" class="form-control me-3"name="confirmation" id="confirmation" placeholder="Repeat new password" onkeyup="validatePassword()">
+                <button type="submit" class="btn btn-primary col-2">Change password</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password");
+            var confirmation = document.getElementById("confirmation");
+
+            if (password.value != confirmation.value) {
+                confirmation.setCustomValidity("Passwords don't match!");
+            } else {
+                confirmation.setCustomValidity("");
+            }
+        }
+    </script>
+{% endblock %}
