@@ -1,5 +1,5 @@
 # Finance-Web-Application
-A web application, that lets you build and manage your portfolio, "buy" and "sell" stocks for real-time prices.
+Web application, that lets you build and manage your portfolio, "buy" and "sell" stocks for real-time prices.
 
 --------------------------------------------------------------------------------------------------------------
 
